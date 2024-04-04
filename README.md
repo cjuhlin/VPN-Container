@@ -23,22 +23,25 @@ Please place your OpenVPN configuration file in the "conf" folder. The configura
 
 ### Podman
 
+Running Podman to create a TUN interface on the host from the container requires the container to be executed with root privileges.
+
 #### Build
 
 ```bash
-podman build --tag vpn-container .
+sudo podman build --tag vpn-container .
 ```
 
 #### Run
 ```bash
-podman run \
+sudo podman run \
     --cap-add NET_ADMIN \
     --cap-add NET_RAW \
 --device=/dev/net/tun \
 --device=/dev/null \
 --security-opt="label=disable" \
---name vpn-container \
-localhost/vpn-container
+--name tacom-vpn \
+--net=host \
+localhost/tacom-vpn
 ```
 
 Note : --security-opt="label=disable"  is needed for SElinux.
