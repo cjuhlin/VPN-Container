@@ -39,9 +39,9 @@ sudo podman run \
 --device=/dev/net/tun \
 --device=/dev/null \
 --security-opt="label=disable" \
---name tacom-vpn \
+--name vpn-container \
 --net=host \
-localhost/tacom-vpn
+localhost/vpn-container
 ```
 
 Note : --security-opt="label=disable"  is needed for SElinux.
