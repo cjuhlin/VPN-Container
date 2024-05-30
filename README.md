@@ -19,7 +19,7 @@ Please note that using older versions of OpenSSL may pose security risks and is 
 
 ### Add vpn config file
 
-Please place your OpenVPN configuration file in the "conf" folder. The configuration file should be named ```profile.ovpn```.
+Please place your OpenVPN configuration/key(s) file(s) in the "conf" folder. The configuration file should be named ```profile.ovpn```.
 
 ### Podman
 
