@@ -41,6 +41,7 @@ sudo podman run \
 --security-opt="label=disable" \
 --name vpn-container \
 --net=host \
+--privileged \
 localhost/vpn-container
 ```
 
